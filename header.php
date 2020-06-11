@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"/>
     <script src="https://kit.fontawesome.com/779a82068f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="<?php echo esc_url(get_stylesheet_uri() ); ?>">
     <?php wp_head(); ?>
   </head>
 
