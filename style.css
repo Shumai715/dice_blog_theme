@@ -16,7 +16,7 @@ p{
   margin-bottom: 18px;
 }
 
-ul{
+ul, ol{
   list-style: none;
 }
 body{
@@ -55,6 +55,7 @@ aside{
 footer{
   grid-area: footer;
   background-color: #e6f0f0;
+  margin-top: 24px;
 }
 
 
@@ -120,7 +121,7 @@ footer{
 .header-h1-img a{
   position: absolute;
   top: 4%;
-  left: 2%;
+  left: 5%;
 }
 .header-h1-img a:hover{
   color: #337ab7;
@@ -197,6 +198,13 @@ footer{
    .top-img{
      border-bottom: 12px solid white;
    }
+   .header-h1-img a{
+     top: 3%;
+     left: 5%;
+   }
+   .header-title{
+     font-size: 6vw;
+   }
    .top-nav{
      width: 98%;
      margin:0 0 0 4px;
@@ -209,6 +217,16 @@ footer{
 
 
 @media screen and (max-width: 360px){
+  .header-h1-img a{
+    top: 0;
+    left: 0;
+  }
+   .header-title{
+     margin-left: 12px;
+   }
+   .header-content{
+     margin-top: -8px !important;
+   }
   .top-nav{
     width: 100%;
   }
@@ -219,13 +237,18 @@ footer{
 
 
 
-.breadcrumb ul{
+.breadcrumb ol{
+
   display: flex;
   font-size: 0.75rem;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+
 }
-.breadcrumb a{
-  color: rgba(0, 0, 0, 0.8);
+.breadcrumb li, .breadcrumb a{
+  color: rgba(0, 0, 0, 0.5);
 }
+
 .breadcrumb a:hover{
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -478,11 +501,33 @@ footer li{
 .footer-nav a:hover{
   border-bottom: 1px solid black;
 }
-.Copyright{
-  float: right;
+.Copyright {
+  width: 100%;
+  text-align: right;
+  margin: 0;
   color: rgba(0, 0, 0, 0.3);
+  background-color: #e6f0f0;
+}
+.Copyright p{
+  margin: 0;
 }
 
+@media screen and (max-width: 820px) {
+  footer li{
+    width: 30%;
+  }
+  .footer-nav h5{
+    font-size: 11pt;
+  }
+}
+
+@media screen and (max-width: 502px){
+  footer li{
+    width: 40%;
+    margin-bottom: 8px;
+  }
+
+}
 /*-----------------------*//*-----------------------*//*-----------------------*/
 /*-----------------------*//*-----------------------*//*-----------------------*/
 
@@ -505,14 +550,21 @@ footer li{
 .article-meta{
   font-size: 11pt;
 }
-
-@media screen and (max-width: 705px){
+.entry-author span::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  content: '\f4ff';
+  margin-right: 4px;
+}
+@media screen and (max-width: 770px){
   .article-meta{
     flex-direction: column;
   }
 
   .entry-ul ul{
     flex-direction: column;
+    margin-bottom: 12px;
   }
   .article-category{
     margin-top: 5px;
@@ -972,7 +1024,7 @@ iframe{
   border: 1px solid rgba(0,0,0,.2);
   padding: 3px 10px 1px;
 }
-.tagcloud a:hover{
+.tagcloud a:hover, .widget_categories a:hover, .widget_archive a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 

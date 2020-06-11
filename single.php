@@ -12,7 +12,7 @@
           <div class="entry-ul">
             <ul>
               <li class="entry-day"><time><?php the_time('Y年n月j日'); ?></time>/ 最終更新日:<time class="renewal-day"><?php the_modified_date('Y年n月j日') ?></time></li>
-              <li class="entry-author"><?php the_author(); ?></li>
+              <li class="entry-author" rel=”author”><span><?php the_author(); ?></span></li>
             </ul>
             </div>
           <div class="article-category"><?php the_category(); ?></div>
@@ -27,9 +27,9 @@
           <span class="article-footer-p"><p>カテゴリー</P></span>
           <?php the_category(); ?>
         </div>
+        <?php if(has_tag() == true): ?>
         <div class="article-footer-tag">
           <div class="article-footer-p"><p>タグ</p></div>
-          <?php if(has_tag() == true): ?>
           <ul class="tag-ul">
              <li>
                <div class="tagcard">
@@ -38,11 +38,10 @@
                  </ul>
                </div>
              </li>
-
           </ul> <!-- tag-ul タグ部分終了 -->
+        </div>
         <?php else: ?>
         <?php endif; ?>
-        </div>
     </article>
 
   <nav class="post-nav_img-to-navigation">

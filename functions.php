@@ -99,16 +99,18 @@ add_action('widgets_init', 'custom_widget_register');
 // パンくずリスト//
 function breadcrumb(){
   $sep = '<li class="sep">></li>';
-  $home = '<li><a href="' .get_bloginfo('url') .'">HOME</a></li>';
-  echo '<ul>';
+  $home = '<li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem"><a itemprop="item" href="' .get_bloginfo('url') .'"><span itemprop="name">HOME</span> ></a></li><meta itemprop="position" content="1" />';
+
+  echo '<ol  itemscope itemtype="http://schema.org/BreadcrumbList">';
 
   if (is_front_page()) {
 
   }
   else if ( is_category() || is_tag() ) {
       echo $home;
-      echo $sep;
-      the_archive_title('<li>', '</li>');
+      the_archive_title('<li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem"><span itemprop="name">', '</span><meta itemprop="position" content="2" /></li>');
   }
 
   else if(is_archive()){
@@ -121,29 +123,32 @@ function breadcrumb(){
     while ($cat_id != 0){
       $cat = get_category( $cat_id );
       $cat_link = get_category_link( $cat_id );
-      array_unshift( $cat_list, '<li><a href="'.$cat_link.'">'.$cat->name.'</a></li>' );
+      array_unshift( $cat_list, '<li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem"><a itemprop="item" href="'.$cat_link.'"><span itemprop="name">'.$cat->name.' </span>></a><meta itemprop="position" content="2" /></li>' );
       $cat_id = $cat->parent;
     }
     echo $home;
-    echo $sep;
     foreach($cat_list as $value){
       echo $value;
     }
-    echo $sep;
 
-    the_title('<li>', '</li>');
+    the_title('<li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem"><span itemprop="name">', '</span><meta itemprop="position" content="3" /></li>');
   }
   else if(is_page()){
     echo $home;
     echo $sep;
-    the_title('<li>', '</li>');
+    the_title('<li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem"><span itemprop="name">', '</span><meta itemprop="position" content="3" /></li>');
   }
   else if(is_search()){
 
   }
-  else if(is_404()){
+  else{
 
   }
+  echo '</ol>';
+
 }
 
 function custom_archive_title($title){
