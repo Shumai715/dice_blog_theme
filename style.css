@@ -1,5 +1,5 @@
 /*
-Theme Name: DiceBlogTheme
+Theme Name: DiceBlog
 Theme URL:
 Description: ダイス🎲ブログ専用テーマ
 Author: dice715
@@ -14,6 +14,7 @@ License URI: テーマのライセンスのURI
 
 html{
   font-size: 100%;
+  background: white;
 }
 img{
   max-width: 100%;
@@ -420,20 +421,25 @@ footer{
    main, aside{
      margin: 0 4px;
    }
-   .thumbnail{
-     width: 100px;
-     height: 100px;
+     .li-day{
+       margin-bottom: 12px;
+     }
+.article-thumbnail img{
+     width: 120px;
+     height: 80px;
      margin: 0 12px 4px 0;
    }
 
    .article-title{
-     font-size: 12pt;
+     margin-top: 28px;
+     margin-bottom: 8px;
+     font-size: 14pt;
    }
    .tagcard p{
      font-size: 10pt;
    }
    .article-summary{
-     font-size: 12px;
+     display: none;
    }
    .tag-ul{
      margin: 0 8px 8px 4px;

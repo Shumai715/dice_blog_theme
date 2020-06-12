@@ -19,7 +19,7 @@
         </div>
         <div class="article-object">
           <ul class="day-category">
-            <li>
+            <li class="li-day">
               <time class="day"><?php the_time('Y年n月j日'); ?>
             </li>
             <li>
