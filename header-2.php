@@ -16,7 +16,9 @@
 
     <!-- ▼ ヘッダー開始 ▼ -->
     <header class="top-header">
-        <div class="icon">  </div>
+      <!-- 広告でレイアウトが崩れるのを防ぐための空白 -->
+      <div class="the-top"><p>　</p></div>
+
       <div class="header-h1-img">
         <a href="<?php echo esc_url( home_url('/')); ?>"><p><span class="header-title">ダイス🎲ブログ</span></p><p class="header-content">声優ラジオやゲーム、旅行が趣味のオタクの日記</p></a>
         <img class="top-img" src="<?php echo esc_url(get_theme_file_uri('images/top-img.png')); ?>" alt="<?php bloginfo('name'); ?>">
