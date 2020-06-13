@@ -4,7 +4,7 @@
       <div class="breadcrumb">
         <?php breadcrumb() ?>
       </div>
-      <div class="archive-title">
+      <div class="archive-page-title">
         <?php the_archive_title('<h1><span>', '</span></h1>'); ?>
       </div>
       <div class="article-table">
@@ -45,7 +45,7 @@
                </div>
              </li>
 
-          </ul> <!-- tag-ul タグ部分終了 -->
+          </ul>
         <?php else: ?>
         <?php endif; ?>
         </div>
