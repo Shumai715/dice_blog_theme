@@ -16,6 +16,11 @@ html{
   font-size: 100%;
   background: white;
 }
+@media screen and (max-width: 501px){
+  html{
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+}
 img{
   max-width: 100%;
 }
@@ -125,7 +130,15 @@ footer{
    }
 
  }
-
+ .icon{
+  background-color: white;
+  margin: 0;
+ }
+.icon img{
+  weight: 50px;
+  height: 50px;
+  margin: 0;
+}
 
  .header-h1-img{
    position: relative;
@@ -278,11 +291,11 @@ footer{
   padding: 12px 4px;
 }
 
-.archive-title{
+.archive-page-title{
   margin-left: 12px;
   margin-bottom: 28px;
 }
-.archive-title span{
+.archive-page-title span{
   font-size: 20pt;
   position: relative;
   padding: 0.4em 2em;
@@ -292,7 +305,7 @@ footer{
   border-radius: 4px;
 }
 
-.archive-title span::after{
+.archive-page-title span::after{
   position: absolute;
   content: '';
   top: 95%;
@@ -304,22 +317,25 @@ footer{
 }
 
 @media screen and (max-width: 992px){
-  .archive-title{
+  .archive-page-title{
     margin-top: 36px;
   }
 }
 @media screen and (max-width: 501px){
-  .archive-title{
+  .archive-page-title{
     margin-top: 0px;
   }
-
-  .archive-title span{
+.article-table article{
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 16px;
+}
+  .archive-page-title span{
     font-size: 16pt;
     padding: 0.3em 1em;
   }
 }
 @media screen and (max-width: 360px){
-  .archive-title span{
+  .archive-page-title span{
     font-size: 11pt;
   }
 }
@@ -404,11 +420,38 @@ footer{
 }
 
 @media screen and (max-width: 501px){
-  .day-category{
-    display: table;
+
+    main, aside{
+    margin: 0 4px;
+    }
+
+    .li-day{
+      margin-top: 4px;
+    }
+    .article-thumbnail{
+      text-align: center;
+    }
+    .article-thumbnail img{
+    float: none;
+    width: 280px;
+    height: 160px;
   }
-  .day{
+  .article-category a{
+    margin-top: -8px;
+  }
+  .article-title{
+    margin-top: 12px;
     margin-bottom: 4px;
+    font-size: 15pt;
+  }
+  .tagcard p{
+    font-size: 10pt;
+  }
+  .article-summary{
+    display: none;
+  }
+  .tag-ul{
+    margin: 0 8px 8px 4px;
   }
 }
 
@@ -417,34 +460,7 @@ footer{
     display: table;
   }
 }
- @media screen and (max-width: 420px){
-   main, aside{
-     margin: 0 4px;
-   }
-     .li-day{
-       margin-bottom: 12px;
-     }
-.article-thumbnail img{
-     width: 120px;
-     height: 80px;
-     margin: 0 12px 4px 0;
-   }
 
-   .article-title{
-     margin-top: 28px;
-     margin-bottom: 8px;
-     font-size: 14pt;
-   }
-   .tagcard p{
-     font-size: 10pt;
-   }
-   .article-summary{
-     display: none;
-   }
-   .tag-ul{
-     margin: 0 8px 8px 4px;
-   }
- }
 
  aside h4{
    font-size: 1.5rem;
