@@ -21,6 +21,9 @@ html{
     background-color: rgba(0, 0, 0, 0.02);
   }
 }
+.article-html{
+  background-color: white;
+}
 img{
   max-width: 100%;
 }
@@ -537,6 +540,9 @@ footer li{
 /*-----------------------*//*-----------------------*//*-----------------------*/
 
 /*-----------記事ページ-----------*/
+.article-page{
+  background-color: white;
+}
 .article-content{
   margin-top: 50px;
   padding: 10px;

@@ -1,4 +1,4 @@
-<?php get_header("2"); ?>
+<?php get_header("3"); ?>
     <main class="article-page">
       <?php if(have_posts()): ?>
         <?php while(have_posts()): ?>
