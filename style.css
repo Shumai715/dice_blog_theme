@@ -58,7 +58,7 @@ header{
   grid-area: header;
 }
 .top-header{
-  background-color: rgba(23, 96, 160, 0.9);
+  background-color: white;
 }
 
 
@@ -151,7 +151,10 @@ footer{
    border-bottom: 16px solid white;
  }
 
-
+.top-header nav{
+  background:  #337ab7;
+  padding-top:4px;
+}
 .top-nav{
   width: 75%;
   display: flex;
