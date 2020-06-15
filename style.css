@@ -18,7 +18,7 @@ html{
 }
 @media screen and (max-width: 501px){
   html{
-    background-color: rgba(230, 230, 230, 0.2);
+    background-color: rgba(215, 206, 187, 0.1);
   }
 }
 .article-html{
@@ -43,6 +43,7 @@ body{
   min-height: 100vh;
   font-family: "メイリオ",Meiryo,"Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",Hiragino Sans,"Noto Sans JP",sans-serif;
   font-size: 14px;
+  min-width: 100vh;
     display: grid;
     grid-template:
      "header header header header header header"
@@ -50,7 +51,7 @@ body{
      "...... main   ...... ...... aside  ......"  1fr
      "...... ...... ...... ...... ...... ......" 10px
      "footer footer footer footer footer footer" 100px
-     /minmax(20px, 240px) 740px 0 72px 340px minmax(0,200px);
+     /minmax(20px, 360px) 740px 0 minmax(72px, 150px) 340px minmax(0,300px);
 
 }
 
