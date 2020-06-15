@@ -43,7 +43,6 @@ body{
   min-height: 100vh;
   font-family: "メイリオ",Meiryo,"Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",Hiragino Sans,"Noto Sans JP",sans-serif;
   font-size: 14px;
-  min-width: 100vh;
     display: grid;
     grid-template:
      "header header header header header header"
@@ -629,6 +628,7 @@ footer li{
 
 .article-content a{
   color: #337ab7;
+  word-break: break-all;
 }
 .article-content a:hover{
   border-bottom:1px solid #337ab7;
