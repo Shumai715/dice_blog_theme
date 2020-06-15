@@ -241,10 +241,9 @@ footer{
 
 
 .breadcrumb ol{
-
   display: flex;
   font-size: 0.75rem;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
 
 }
@@ -270,8 +269,8 @@ footer{
 }
 
 .archive-page-title{
-  margin-left: 12px;
-  margin-bottom: 28px;
+  margin: 0 0 28px 12px;
+  padding-top: 24px;
 }
 .archive-page-title span{
   font-size: 20pt;
@@ -300,9 +299,6 @@ footer{
   }
 }
 @media screen and (max-width: 501px){
-  .archive-page-title{
-    margin-top: 0px;
-  }
 .article-table article{
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 16px;
